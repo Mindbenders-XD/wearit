@@ -1,11 +1,12 @@
 import React from 'react';
 import './styles/App.scss';
-import {Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Catalog from './components/catalog';
 import Product from './components/product'
 
 function App() {
     return ( 
+        <BrowserRouter>
     <div className = "App">
         <p className="App-link">React App</p>
         <div>
@@ -17,7 +18,12 @@ function App() {
             <Route path="/Prodcut/:productID" exact component={Product} />
         </Switch>
     </div>
+    </BrowserRouter>
     );
+}
+
+export function sum(a,b){
+    return a+b;
 }
 
 export default App;
