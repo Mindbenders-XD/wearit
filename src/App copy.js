@@ -1,30 +1,25 @@
 import React from 'react';
 import './styles/vendor.min.css';
 import './styles/app.scss';
-import {BrowserRouter, Router, Route, Switch, Link} from 'react-router-dom';
-import $ from 'jquery';
-import bootstrap from 'bootstrap';
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Catalog from './components/catalog';
-import Product from './components/product';
-import Header from './components/header';
-import Footer from './components/footer';
-import Banner from './components/banner';
+import Product from './components/product'
 
 function App() {
-    return (
-        <> 
+    return ( 
         <BrowserRouter>
+        <div className = "App">
+        <p className="App-link">React App</p>
         <div>
-        <Header />
-        <Banner />
+            <p><Link to="/">Wear It!!! (Home)</Link></p>
+            <p><Link to="/Prodcut/test">Product Page</Link></p>
+        </div>
         <Switch>
             <Route path="/" exact component={Catalog} />
             <Route path="/Prodcut/:productID" exact component={Product} />
         </Switch>
-        <Footer />
-        </div>
+    </div>
     </BrowserRouter>
-    </>
     );
 }
 
