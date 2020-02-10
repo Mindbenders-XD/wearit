@@ -8,19 +8,15 @@ import Catalog from './components/catalog';
 import Product from './components/product';
 import Header from './components/header';
 import Footer from './components/footer';
-import Banner from './components/banner';
 
 function App() {
     return (
         <> 
         <BrowserRouter>
         <div>
-        <Header />
-        <Banner />
-        <Switch>
+        <Header />        
             <Route path="/" exact component={Catalog} />
-            <Route path="/Prodcut/:productID" exact component={Product} />
-        </Switch>
+            <Route path="/Product/:productID" component={Product} />
         <Footer />
         </div>
     </BrowserRouter>

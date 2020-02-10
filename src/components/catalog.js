@@ -3,6 +3,7 @@ import ProductCard from './productCard';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as productActions from '../actions/productActions';
+import Banner from './banner';
 
 class Catalog extends Component{
     constructor(props){
@@ -18,12 +19,16 @@ class Catalog extends Component{
     }
 
     loadProducts(){
-      this.props.actions.getProducts();
+      // this.props.actions.getProducts();
+      this.props.actions.loadProducts();
+      // this.props.loadProducts();
     }
 
     render(){
       console.log("this.props in catalog", this.props);
       return(
+        <>
+        <Banner />
         <div className="container">
           <div className="row">
             {this.props.products.products && this.props.products.products.map((product, productInd)=>(
@@ -31,6 +36,7 @@ class Catalog extends Component{
             ))}
           </div>
         </div>
+        </>
       )
     }
 }
@@ -44,6 +50,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch){
   return{
+    // loadProducts: ()=> dispatch(productActions.loadProducts)
       actions: bindActionCreators(productActions, dispatch)
   };
 }
