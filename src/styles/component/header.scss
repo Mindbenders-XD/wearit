@@ -2,9 +2,15 @@
     &__top {
         background:$white;
         height: 40px;
-        border-bottom: 1px solid $gerey-dark;
+        border-bottom: 1px solid $grey-dark;
         @include if-max-break(sm) {
             display: none;
+        }
+        .light--theme &{
+            background: $white;
+        }
+        .dark--theme &{
+            background: $white;
         }
     }
     &__left {
@@ -23,7 +29,7 @@
             color:$primary-2;
             text-transform: uppercase;
             font-size: 13px;
-            border-right: 1px solid $gerey-dark;
+            border-right: 1px solid $grey-dark;
             padding: 0 19px 0 23px;
             float: left;
             @include if-max-break(md) {
@@ -37,6 +43,12 @@
     }
     &__bottom {
         background: $bg-gray;
+        .light--theme &{
+            background: $light-bg;
+        }
+        .dark--theme &{
+            background: $dark-bg;
+        }
     }
     &__logo {
         float: left;
@@ -64,12 +76,18 @@
         float: left;
         @include if-max-break(md) {
             position: absolute;
-            right: 0;
+            right: -15px;
             top: 79px;
             z-index: 99;
             background:$bg-gray;
             left: auto;
             width: 120px;
+            .dark--theme &{
+                background: $primary-1;
+            }
+            .light--theme &{
+                background: $light-bg;
+            }
         }
         &.collapse{
             display: block;
@@ -93,12 +111,18 @@
             font-size: 12px;
             float: left;
             @include if-max-break(md) {
+                border-bottom: 1px solid $grey-dark; 
+                display: block;
                 line-height: 40px;
-                border-bottom: 1px solid $gerey-dark;
+                text-align: center;               
+                width: 100%;    
             }
-            &.active{
+            .dark--theme &{
+                color: $white;
+            }
+            &:hover, &.active{
                 color: $blue;
-            }
+            }            
         }
     }
     &__icons {
@@ -107,15 +131,21 @@
         @include if-max(lg) {
             display: none;
         }
-
         a{
             color: $primary-1;
             line-height: 82px;
             padding: 0 27px;
-            border-right: 1px solid $gerey-dark;
+            border-right: 1px solid $grey-dark;
             float: left;
             &:first-child{
-                border-left: 1px solid $gerey-dark;
+                border-left: 1px solid $grey-dark;
+            }
+            .light--theme &{
+                border-color: $grey-dark;
+            }
+            .dark--theme &{
+                color: $white;
+                border-color: $grey-medium;
             }
         }
     }

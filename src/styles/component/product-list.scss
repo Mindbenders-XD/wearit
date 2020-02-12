@@ -15,11 +15,17 @@
         font-size: 14px;
         padding: 9px 0 7px;
         margin: 0;
+        .dark--theme &{
+            color: $white;
+        }
     }
     &__price{
         color: $primary-2;
         font-size: 16px;
         margin-bottom: 10px;
+        .dark--theme &{
+            color: $white;
+        }
     }
     &__hover {
         position: absolute;

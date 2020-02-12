@@ -7,13 +7,24 @@ export const loadProducts = () =>{
         payload: [],
         meta: {
             offline: {
-                effect: {url: 'https://api.myjson.com/bins/dap2o', method: 'GET'},
-                commit: {type: types.PRODUCT_LOAD_COMMIT
-            }
+                //effect: {url: 'https://api.myjson.com/bins/dap2o', method: 'GET'},
+                effect: {url: 'https://api.myjson.com/bins/zwai4', method: 'GET'},
+                commit: {type: types.PRODUCT_LOAD_COMMIT}
         }
     }
 }
 };
+
+export const markFavourite = (productId)=>{
+    return{
+        type: types.MARK_FAOURITE,
+        payload: {productId: productId}
+    }
+}
+
+export const addProduct = (prodObj) =>{
+    console.log("In add prodcut actioin", prodObj)
+}
 
 // export function productsLoaded(products) {
 //     return {

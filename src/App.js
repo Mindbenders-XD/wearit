@@ -4,23 +4,38 @@ import './styles/app.scss';
 import {BrowserRouter, Router, Route, Switch, Link} from 'react-router-dom';
 import $ from 'jquery';
 import bootstrap from 'bootstrap';
-import Catalog from './components/catalog';
-import Product from './components/product';
-import Header from './components/header';
-import Footer from './components/footer';
+import Catalog from './components/productCatalog/catalog';
+import Product from './components/productDetails/product';
+import Header from './components/common/header';
+import Footer from './components/common/footer';
+import Newsletter from './components/common/newsletter';
+import AddProduct from './components/admin/addProduct';
 
 function App() {
+
+    //Ask permission for Push Notification
+    Notification.requestPermission(function(status) {
+        console.log('Notification permission status:', status);
+    });
     return (
-        <> 
-        <BrowserRouter>
-        <div>
-        <Header />        
-            <Route path="/" exact component={Catalog} />
-            <Route path="/Product/:productID" component={Product} />
-        <Footer />
+        <div className="light--theme">
+            <BrowserRouter>
+                <Header />     
+                <Switch>   
+                    <Route exact path="/">
+                        <Catalog />
+                    </Route>
+                    <Route path="/Product/:productId">
+                        <Product />
+                    </Route>
+                    <Route path="/addProduct">
+                        <AddProduct />
+                    </Route>
+                </Switch>
+                <Newsletter />
+                <Footer />
+            </BrowserRouter>
         </div>
-    </BrowserRouter>
-    </>
     );
 }
 

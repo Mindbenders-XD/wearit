@@ -1,0 +1,43 @@
+.product{
+    font-family: $segoe-bold;
+    margin-bottom: 30px;
+    transition: all 400ms ease-in-out 0s;
+    &__image{
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        .img-fluid{
+            max-height: 100%;
+        }
+    }
+    &__title{
+        color: $primary-1;
+        font-size: 14px;
+        padding: 9px 0 7px;
+        margin: 0;
+    }
+    &__price{
+        color: $primary-2;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    &__hover {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        opacity: 0;
+        transition: all 400ms ease-in-out 0s;
+        a{
+            color: $primary-2;
+            background: $white;
+            padding: 10px;
+            margin-left: 10px;
+        }
+    }
+    &:hover{
+        .product__hover{
+            opacity: 1;
+            transition: all 400ms ease-in-out 0s;
+        }
+    }
+}

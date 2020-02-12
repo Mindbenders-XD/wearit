@@ -9,8 +9,10 @@ export default function productReducer(state = initialState.products, action) {
     case types.PRODUCT_LOAD_COMMIT:
       return action.payload;
 
-    case types.PRODUCT_LOAD_COMMIT:
-      return action.payload;
+    case types.MARK_FAOURITE:
+      debugger;
+      state[action.payload.productId].isFavourite = true
+      return Object.assign({}, state);
 
     default:
       return state;

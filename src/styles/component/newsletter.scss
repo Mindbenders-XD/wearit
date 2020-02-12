@@ -13,7 +13,8 @@
         margin: auto;
         padding: 0 15px;
         width: 630px;
-        @media (max-width: 650px){
+        @include if-max-break(md){
+            padding: 0;
             width: 100%;
         }
     }
@@ -21,27 +22,49 @@
         font-family: $segoe-bold;
         font-size: 30px;
         margin-bottom: 10px;
+        .dark--theme &{
+            color: $white;
+        }
+        @include if-max-break(md) {
+            font-size: 20px;
+        }
     }
     &__info{
         color: $primary-2;
         margin-bottom: 50px;
+        .dark--theme &{
+            color: $white;
+        }
     }
     &__textbox{
         background: $white;
         border: none;
-        border-radius: 50px;
         color: $primary-2;        
-        height: 40px;
-        padding: 12px 140px 15px 25px;
-        width: 100%;
+        height: 50px;
+        padding: 12px 15% 15px 25px;
+        width: 90%;
         &:focus{
             box-shadow: 0 0 4px inset $primary-2;
             outline: none;
             transition: all 0.5s linear;
         }
     }
-    .btn{
-        position: absolute;
-        right: 15px;
+    &__content{
+        position: relative;
+        .btn--blue{
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+    }
+    .light--theme & {
+        background: $purple-light;
+    }
+    .dark--theme & {
+        background: $dark-blue;
+        .btn--blue{
+            background: $dark-bg;
+            color: $white;
+        }
     }
 }
