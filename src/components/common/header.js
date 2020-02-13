@@ -57,9 +57,9 @@ function Header(){
         <div className="theme-selection">
             <a className="theme-selection__icon" data-toggle="collapse" href="#theme-settings"><span class="fas fa-cog"></span></a>
             <div className="theme-selection__collapse collapse" id="theme-settings">
-                <a href="#/" className="default-theme" title="White Theme"><span className="d-none d-print-block">White</span></a>
-                <a href="#/" class="light-theme" title="Grey Theme"><span className="d-none d-print-block">Grey</span></a>
-                <a href="#/" class="dark-theme" title="Black Theme"><span className="d-none d-print-block">Black</span></a>
+                <a href="#/" className="default--theme" title="White Theme"><span className="d-none d-print-block">White</span></a>
+                <a href="#/" class="light--theme" title="Grey Theme"><span className="d-none d-print-block">Grey</span></a>
+                <a href="#/" class="dark--theme" title="Black Theme"><span className="d-none d-print-block">Black</span></a>
             </div>
         </div>
 </div>
