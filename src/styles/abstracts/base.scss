@@ -10,11 +10,13 @@ body{
 a, a:hover, a:focus{
     text-decoration: none;
 }
-
-.light--theme{
+.default-theme{
+    background: $white;
+}
+.light--theme, .light-theme{
     background: $light-bg;
 }
-.dark--theme{
+.dark--theme, .dark-theme{
     background: $dark-bg;
 }
 @media (min-width: 1260px) {

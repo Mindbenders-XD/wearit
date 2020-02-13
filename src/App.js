@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/vendor.min.css';
-import './styles/app.scss';
+import './styles/App.scss';
 import {BrowserRouter, Router, Route, Switch, Link} from 'react-router-dom';
 import $ from 'jquery';
 import bootstrap from 'bootstrap';

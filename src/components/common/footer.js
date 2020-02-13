@@ -38,28 +38,28 @@ function Footer(){
                         </div>
                         <div className="instafeed">
                             <div className="instafeed__img">
-                                <img src={require("../../images/1.png")} alt=""/>
+                                <img src={require("../../images/1.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/2.png")} alt=""/>
+                                <img src={require("../../images/2.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/3.png")} alt=""/>
+                                <img src={require("../../images/3.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/4.png")} alt=""/>
+                                <img src={require("../../images/4.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/5.png")} alt=""/>
+                                <img src={require("../../images/5.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/6.png")} alt=""/>
+                                <img src={require("../../images/6.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/7.png")} alt=""/>
+                                <img src={require("../../images/7.png")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/8.png")} alt=""/>
+                                <img src={require("../../images/8.png")} alt="instaimg"/>
                             </div>
                         </div>
                     </div>
