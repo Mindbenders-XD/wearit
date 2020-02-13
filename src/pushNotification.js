@@ -1,7 +1,16 @@
 export default function displayNotification(prodName) {
-    if (Notification.permission == 'granted') {
+    if (Notification.permission === 'granted') {
       navigator.serviceWorker.getRegistration().then(function(reg) {
-        reg.showNotification(`Product "${prodName}" Added!`);
+        var options = {
+          body: 'Wear It has added a new product. Check it out!',
+          icon: require("./images/1.png"),
+          vibrate: [100, 50, 100],
+          data: {
+            dateOfArrival: Date.now(),
+            primaryKey: 1
+          }
+        };
+        reg.showNotification(`Product "${prodName}" Added!`, options);
       });
     }
   }
