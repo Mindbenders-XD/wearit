@@ -21,14 +21,31 @@ const Product = () => {
       {currentProduct.productId == productId && <section className="container">
         <div className="row">
           <div className="col-lg-6 col-sm-12">
-            <div>
-              <div className="item">
-                <img
-                  src={require(`../../images/${currentProduct.image}`)}
-                  alt=""
-                />
-              
-              </div>              
+            <div className="product-details-image">
+              <img
+                src={require(`../../images/${currentProduct.image}`)}
+                alt="productImg"
+              /> 
+              <div className="product-details-image--thumbnail">
+                <div className="item current">
+                  <img
+                    src={require(`../../images/${currentProduct.image}`)}
+                    alt="productImgThumb"
+                  />
+                </div>
+                <div className="item">
+                  <img
+                    src={require(`../../images/${currentProduct.image}`)}
+                    alt="productImgThumb"
+                  />
+                </div>
+                <div className="item">
+                  <img
+                    src={require(`../../images/${currentProduct.image}`)}
+                    alt="productImgThumb"
+                  />
+                </div>
+              </div>            
             </div>
           </div>
           <div className="col-lg-6 col-sm-12">

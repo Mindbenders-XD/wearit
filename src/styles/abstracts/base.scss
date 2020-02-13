@@ -10,7 +10,9 @@ body{
 a, a:hover, a:focus{
     text-decoration: none;
 }
-
+.default--theme{
+    background: $white;
+}
 .light--theme{
     background: $light-bg;
 }

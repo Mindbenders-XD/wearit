@@ -1,52 +1,41 @@
-#sync1 {
-    .item {
-        height: 557px;
+.product-details-image{
+    height: 557px;
+    width: 100%;
+    @include if-max-break(sm) {
+        height: 355px;
+    }
+    img{
+        height: 100%;
         width: 100%;
-        @include if-max-break(sm) {
-            height: 355px;
-        }
-        img{
-            height: 100%;
-        }
     }
-  }
-  
-  #sync2 {
-    position: absolute;
-    bottom: 30px;
-    right: 45px;
-    width: 165px;
-    .item {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    .current .item{
-      position: relative;
-      &:after {
-        content: "";
+    &--thumbnail{
         position: absolute;
-        background: rgba(184,80,77,0.8);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        bottom: 30px;
+        right: 45px;
+        width: 165px;
+        .item {
+            border: 1px solid $light-bg;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: relative;
+            float: right;
+            margin-left: 5px;
+            &.current{
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background: rgba(184,80,77,0.8);
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }        
     }
-    }
-  }
-  
-  .owl-theme {
-    .owl-nav {
-      [class*='owl-'] {
-        transition: all .3s ease;
-        &.disabled:hover {
-         background-color: #D6D6D6;
-        }   
-      }
-      
-    }
-  }
-
+}
 .product-details {
     padding: 60px 0 60px 84px;
     color: $primary-2;

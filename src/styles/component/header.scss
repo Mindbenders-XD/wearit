@@ -43,6 +43,7 @@
     }
     &__bottom {
         background: $bg-gray;
+        position: relative;
         .light--theme &{
             background: $light-bg;
         }
@@ -66,7 +67,7 @@
             display: none;
             font-size: 31px;
             float: right;
-            margin: 17px 0;
+            margin: 17px 30px 17px 0;
             @include if-max-break(md) {
                 display: block;
             }
@@ -148,5 +149,40 @@
                 border-color: $grey-medium;
             }
         }
+    }
+    .theme-selection{
+        position: absolute;
+        right: 0px;
+        top: 25px;
+        z-index: 2;
+        &__icon {
+            width: 30px;
+            display: block;
+            background:$blue;
+            color:$white;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            .fas{
+                animation: rotation 2s infinite linear;
+            }
+        }
+        &__collapse{
+            &.show{display: block;}
+            a{
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
     }
 }
