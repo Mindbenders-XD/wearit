@@ -1,7 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import ProdcutBanner from "./productBanner";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+import Newsletter from '../common/newsletter';
 import $ from 'jquery';
 
 const Product = () => {
@@ -15,31 +16,47 @@ const Product = () => {
     window.scrollTo(0, 0)
   }, []);
 
+  const imageChange = (e)=>{
+    console.log("On imageChange click", e);
+    $("#prodImg"+currentProduct.productId).addClass("fade");
+    let newImgSrc = e.target.src;
+    $(e.target).parent().parent().find(".current").removeClass("current");
+    $(e.target).parent().addClass("current");   
+    setTimeout(()=>{
+      $("#prodImg"+currentProduct.productId).attr("src", newImgSrc); 
+      $("#prodImg"+currentProduct.productId).removeClass("fade");
+    },200)    
+    debugger;
+  }
+
+  let imgId = "prodImg"+currentProduct.productId;
+
   return (
     <div>
       <ProdcutBanner />
       {currentProduct.productId == productId && <section className="container">
+      {/* <section className="container"> */}
         <div className="row">
           <div className="col-lg-6 col-sm-12">
             <div className="product-details-image">
-              <img
+              <img id={imgId}
                 src={require(`../../images/${currentProduct.image}`)}
                 alt="productImg"
               /> 
-              <div className="product-details-image--thumbnail">
+              <div className="product-details-image--thumbnail" onClick={imageChange}>
+                <div className="item">
+                  <img
+                    src={require(`../../images/2.png`)}
+                    alt="productImgThumb"
+                  />
+                </div>
+                <div className="item">
+                  <img
+                    src={require(`../../images/3.png`)}
+                    alt="productImgThumb"
+                  />
+                </div>
                 <div className="item current">
-                  <img
-                    src={require(`../../images/${currentProduct.image}`)}
-                    alt="productImgThumb"
-                  />
-                </div>
-                <div className="item">
-                  <img
-                    src={require(`../../images/${currentProduct.image}`)}
-                    alt="productImgThumb"
-                  />
-                </div>
-                <div className="item">
                   <img
                     src={require(`../../images/${currentProduct.image}`)}
                     alt="productImgThumb"
@@ -91,7 +108,8 @@ const Product = () => {
             </div>
           </div>
         </div>
-      </section>}
+  </section>   }   
+  <Newsletter sourcePageProduct={true}/> 
     </div>
   );
 };

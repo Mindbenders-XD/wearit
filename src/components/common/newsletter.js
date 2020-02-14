@@ -1,9 +1,9 @@
 import React from 'react';
 
-const  Newsletter = ()=>{
-
+const  Newsletter = (props)=>{
+    let prodPageCls = props.sourcePageProduct ? "newsletter mt-0" : "mt-0";
     return(
-        <section className="newsletter">
+        <section className={prodPageCls}>
         <div className="newsletter__container">
             <h2 className="newsletter__title text-center">Subscribe for Our Newsletter</h2>
             <p className="newsletter__info text-center">We won't send any kind of spam</p>

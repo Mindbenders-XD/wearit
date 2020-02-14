@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ProductCard from './productCard';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
+import Newsletter from '../common/newsletter';
 import * as productActions from '../../actions/productActions';
 import Banner from './banner';
 
@@ -46,7 +47,8 @@ class Catalog extends Component{
           <div className="row">
             {this.displayProducts()}
           </div>
-        </div>
+        </div>        
+        <Newsletter />
         </>
       )
     }

@@ -1,26 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles/vendor.min.css';
-import './styles/App.scss';
-import {BrowserRouter, Router, Route, Switch, Link} from 'react-router-dom';
+import './styles/app.scss';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import $ from 'jquery';
 import bootstrap from 'bootstrap';
 import Catalog from './components/productCatalog/catalog';
 import Product from './components/productDetails/product';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
-import Newsletter from './components/common/newsletter';
 import AddProduct from './components/admin/addProduct';
 
 function App() {
 
+    let [themeVal, setThemeVal] = useState('default--theme');
     //Ask permission for Push Notification
     Notification.requestPermission(function(status) {
         console.log('Notification permission status:', status);
     });
+
+    const changeTheme = (e)=>{
+        console.log("In change theme click", e.target);
+        let themeClass = e.target.getAttribute("class");
+        setThemeVal(themeClass);
+        debugger;
+    }
+
     return (
-        <div className="light--theme">
+        <div className={themeVal}>
             <BrowserRouter>
-                <Header />     
+                <Header changeTheme={changeTheme}/>     
                 <Switch>   
                     <Route exact path="/">
                         <Catalog />
@@ -32,7 +40,6 @@ function App() {
                         <AddProduct />
                     </Route>
                 </Switch>
-                <Newsletter />
                 <Footer />
             </BrowserRouter>
         </div>

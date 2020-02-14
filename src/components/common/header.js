@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function Header(){
+function Header(props){
     return(        
     <div className="header">
     <div className="header__top">
@@ -14,7 +14,7 @@ function Header(){
                     <div className="header__right">
                         <a href="#/">Login/Register</a>
                         <a href="#/">My account</a>
-                        <a href="#/">Contact Us</a>
+                        <Link to="/addProduct">Admin</Link>
                     </div>
                 </div>
             </div>
@@ -56,10 +56,10 @@ function Header(){
     </div>
         <div className="theme-selection">
             <a className="theme-selection__icon" data-toggle="collapse" href="#theme-settings"><span class="fas fa-cog"></span></a>
-            <div className="theme-selection__collapse collapse" id="theme-settings">
-                <a href="#/" className="default--theme" title="White Theme"><span className="d-none d-print-block">White</span></a>
-                <a href="#/" class="light--theme" title="Grey Theme"><span className="d-none d-print-block">Grey</span></a>
+            <div className="theme-selection__collapse collapse" id="theme-settings" onClick={props.changeTheme}>
                 <a href="#/" class="dark--theme" title="Black Theme"><span className="d-none d-print-block">Black</span></a>
+                <a href="#/" class="light--theme" title="Grey Theme"><span className="d-none d-print-block">Grey</span></a>
+                <a href="#/" className="default--theme" title="White Theme"><span className="d-none d-print-block">White</span></a>
             </div>
         </div>
 </div>

@@ -3,7 +3,7 @@ export default function displayNotification(prodName) {
       navigator.serviceWorker.getRegistration().then(function(reg) {
         var options = {
           body: 'Wear It has added a new product. Check it out!',
-          icon: require("./images/1.png"),
+          icon: require("./images/shirt.png"),
           vibrate: [100, 50, 100],
           data: {
             dateOfArrival: Date.now(),
