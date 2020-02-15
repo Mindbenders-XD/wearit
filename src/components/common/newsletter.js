@@ -1,7 +1,7 @@
 import React from 'react';
 
 const  Newsletter = (props)=>{
-    let prodPageCls = props.sourcePageProduct ? "newsletter mt-0" : "mt-0";
+    let prodPageCls = props.sourcePageProduct ? "newsletter mt-0" : "newsletter";
     return(
         <section className={prodPageCls}>
         <div className="newsletter__container">

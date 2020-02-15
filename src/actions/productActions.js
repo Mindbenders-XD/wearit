@@ -23,6 +23,10 @@ export const markFavourite = (productId)=>{
 
 export const addProduct = (prodObj) =>{
     console.log("In add prodcut actioin", prodObj)
+    return{
+        type: types.ADD_PRODUCT,
+        payload: prodObj
+    }
 }
 
 // export function productsLoaded(products) {

@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
+import {addProduct} from '../../actions/productActions';
 import displayNotification from '../../pushNotification';
 
 const AddProduct = (props) =>{
-
+    let history = useHistory();
+    const allProducts = useSelector(state => state.products);
+    const dispatch = useDispatch();
     const [prodName, setProdName] = useState('');
     const [category, setCategory] = useState('');
     const [price, setPrice] = useState(0);
@@ -11,8 +15,9 @@ const AddProduct = (props) =>{
     // const dispatch = useDispatch();
 
     const productSubmit = (e)=>{
+        let newProductId = Object.keys(allProducts).length + 1;
         let prodObj = {
-            "productId": 0,
+            "productId": newProductId,
             "productName": prodName,
             "category": category,
             "price": price,
@@ -22,7 +27,9 @@ const AddProduct = (props) =>{
             "isFavourite": false
           }
           debugger;
+          dispatch(addProduct(prodObj));
           displayNotification(prodName);
+          history.push("/");
     }
 
     return(

@@ -19,6 +19,7 @@ class Catalog extends Component{
     componentDidMount(){
       if(!Object.keys(this.props.products).length)
       this.loadProducts();
+      window.scrollTo(0, 0)
     }
 
     loadProducts(){
@@ -31,9 +32,9 @@ class Catalog extends Component{
       let prodArrs =[];
       let products = this.props.products;
       let productKeys = Object.keys(products);
-      productKeys.map((prod, ind)=>{
+      prodArrs = productKeys.map((prod, ind)=>{
         let prodDetails = products[prod];
-        prodArrs.push(<ProductCard key={prod} details={prodDetails} favUpdateCall={this.props.actions.markFavourite}/>)
+        return (<ProductCard key={prod} details={prodDetails} favUpdateCall={this.props.actions.markFavourite}/>)
       });
       return prodArrs;
     }
@@ -55,7 +56,7 @@ class Catalog extends Component{
 }
 
 function mapStateToProps(state, ownProps) {
-  console.log("Value of state", state);  
+  console.log("Value of state in catalog", state);  
   return {
       products: state.products
   }
