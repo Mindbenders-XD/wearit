@@ -35,6 +35,7 @@ function Header(props){
                             <a href="#/">Blog</a>
                             <a href="#/">Pages</a>
                             <a href="#/">Contact</a>
+                            <Link className="mobile-on" to="/addProduct">Admin</Link>
                         </div>
                         <div className="header__icons">
                             <a href="#/">
