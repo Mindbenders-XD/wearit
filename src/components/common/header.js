@@ -34,7 +34,7 @@ function Header(props){
                             <a href="#/">Shop</a>
                             <a href="#/">Blog</a>
                             <a href="#/">Pages</a>
-                            <a href="#/">Contact</a>
+                            <a href="#/">Contact Us</a>
                         </div>
                         <div className="header__icons">
                             <a href="#/">
