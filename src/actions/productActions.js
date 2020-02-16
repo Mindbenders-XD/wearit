@@ -21,8 +21,14 @@ export const markFavourite = (productId)=>{
     }
 }
 
-export const addProduct = (prodObj) =>{
-    console.log("In add prodcut actioin", prodObj)
+export const unMarkFavourite = (productId)=>{
+    return{
+        type: types.UNMARK_FAOURITE,
+        payload: {productId: productId}
+    }
+}
+
+export function addProduct (prodObj){
     return{
         type: types.ADD_PRODUCT,
         payload: prodObj
@@ -37,7 +43,6 @@ export const addProduct = (prodObj) =>{
 
 // //With Fetch
 // export function getProducts() {
-//     console.log("getproducts called")
 //     return function (dispatch) {
 //         fetch('https://api.myjson.com/bins/dap2o')
 //             .then(response => response.json())

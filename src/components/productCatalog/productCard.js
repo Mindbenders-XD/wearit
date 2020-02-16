@@ -14,12 +14,15 @@ class ProductCard extends React.Component{
     onFavIconClick(e){
         debugger;
         $(e.currentTarget).toggleClass("fas");
-        this.props.favUpdateCall(this.props.details.productId);
+        if(!this.props.details.isFavourite){
+            this.props.favUpdateCall(this.props.details.productId);
+        }else{
+            this.props.notFavUpdateCall(this.props.details.productId);
+        }        
     }
 
     render(){
-        console.log("value of details", this.props.details);
-        let heartCls = this.props.details.isFavourite ? `far fa-heart fas` : `far fa-heart`
+        let heartCls = this.props.details.isFavourite ? `far fa-heart fas` : `far fa-heart`;
         return(<div className="product w-20 col text-center" id={this.props.details.productId}>
         <div className="product__image">
             <div className="product__hover">

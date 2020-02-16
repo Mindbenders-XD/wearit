@@ -12,14 +12,9 @@ import AddProduct from './components/admin/addProduct';
 
 function App() {
 
-    let [themeVal, setThemeVal] = useState('default--theme');
-    //Ask permission for Push Notification
-    Notification.requestPermission(function(status) {
-        console.log('Notification permission status:', status);
-    });
+    let [themeVal, setThemeVal] = useState('default--theme');    
 
     const changeTheme = (e)=>{
-        console.log("In change theme click", e.target);
         let themeClass = e.target.getAttribute("class");
         setThemeVal(themeClass);
         debugger;
@@ -44,10 +39,6 @@ function App() {
             </BrowserRouter>
         </div>
     );
-}
-
-export function sum(a,b){
-    return a+b;
 }
 
 export default App;

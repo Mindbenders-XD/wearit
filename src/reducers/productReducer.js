@@ -14,6 +14,10 @@ export default function productReducer(state = initialState.products, action) {
       state[action.payload.productId].isFavourite = true
       return Object.assign({}, state);
 
+    case types.UNMARK_FAOURITE:
+      state[action.payload.productId].isFavourite = false;
+      return Object.assign({}, state);
+
     case types.ADD_PRODUCT:
       debugger;
       state[action.payload.productId] = action.payload;

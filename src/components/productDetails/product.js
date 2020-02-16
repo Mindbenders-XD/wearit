@@ -3,11 +3,13 @@ import ProdcutBanner from "./productBanner";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Newsletter from '../common/newsletter';
+import * as actions from '../../actions/productActions';
 import $ from 'jquery';
 
 const Product = () => {
   const { productId } = useParams();
   const allProducts = useSelector(state => state.products);
+  console.log("allProducts in Product Page",allProducts);
   const dispatch = useDispatch();
 
   let currentProduct = Object.keys(allProducts).length ? allProducts[productId] : {};
@@ -17,7 +19,6 @@ const Product = () => {
   }, []);
 
   const imageChange = (e)=>{
-    console.log("On imageChange click", e);
     $("#prodImg"+currentProduct.productId).addClass("fade");
     let newImgSrc = e.target.src;
     $(e.target).parent().parent().find(".current").removeClass("current");
@@ -29,8 +30,18 @@ const Product = () => {
     debugger;
   }
 
-  let imgId = "prodImg"+currentProduct.productId;
+  const onFavIconClick = (e)=>{
+    debugger;
+    $(e.currentTarget).toggleClass("fas");
+    if(!currentProduct.isFavourite){
+      actions.markFavourite(currentProduct.productId);
+    }else{
+      actions.unMarkFavourite(currentProduct.productId);
+    }
+}
 
+  let imgId = "prodImg"+currentProduct.productId;
+  let heartCls = currentProduct.isFavourite ? `far fa-heart fas` : `far fa-heart`
   return (
     <div>
       <ProdcutBanner />
@@ -103,7 +114,7 @@ const Product = () => {
                   ADD TO CART
                 </button>
                 <span className="far fa-gem float-left"></span>
-                <span className="far fa-heart float-left"></span>
+                <span className={heartCls+" float-left"} onClick={onFavIconClick}></span>
               </div>
             </div>
           </div>

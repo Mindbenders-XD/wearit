@@ -34,13 +34,12 @@ class Catalog extends Component{
       let productKeys = Object.keys(products);
       prodArrs = productKeys.map((prod, ind)=>{
         let prodDetails = products[prod];
-        return (<ProductCard key={prod} details={prodDetails} favUpdateCall={this.props.actions.markFavourite}/>)
+        return (<ProductCard key={prod} details={prodDetails} favUpdateCall={this.props.actions.markFavourite} notFavUpdateCall={this.props.actions.unMarkFavourite}/>)
       });
       return prodArrs;
     }
 
     render(){
-      console.log("this.props in catalog", this.props);
       return(
         <>
         <Banner />
@@ -56,7 +55,7 @@ class Catalog extends Component{
 }
 
 function mapStateToProps(state, ownProps) {
-  console.log("Value of state in catalog", state);  
+  console.log("all products in catalog", state.products);
   return {
       products: state.products
   }
