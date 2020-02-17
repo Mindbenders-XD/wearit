@@ -23,7 +23,7 @@ const AddProduct = (props) =>{
             "price": price,
             "isAvailable": true,
             "description": description,
-            "image": "shirt.png",
+            "image": "shirt",
             "isFavourite": false
           }
           debugger;
@@ -61,10 +61,6 @@ const AddProduct = (props) =>{
                     <div className="form-group">
                         <label for="description-add">Description:</label>
                         <textarea className="form-control" value={description} onChange={e=>setDescription(e.target.value)} rows="5" id="description-add"></textarea>
-                    </div>
-                    <div className="form-group">
-                        <label for="image-choose">Image</label>
-                        <input type="text" className="form-control" id="image-choose" name="filename"/>
                     </div>
                     <button type="submit" className="btn btn-primary" aria-label="Left Align">Submit</button>
                 </form>
