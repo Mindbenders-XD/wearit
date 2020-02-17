@@ -1,0 +1,16 @@
+{
+  "name": "wearit",
+  "version": "1.0.0",
+  "description": "Fashion Apparael",
+  "main": "precache-manifest.c458d205b2aeaa414d7037ac60d041ec.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "a"
+  },
+  "author": "Anandi",
+  "license": "ISC"
+}
