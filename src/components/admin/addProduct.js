@@ -40,7 +40,7 @@ const AddProduct = (props) =>{
                 <form onSubmit={productSubmit}>
                     <div className="form-group">
                         <label for="dress-select">Product Name:</label>
-                        <input type="text" className="form-control" value={prodName} onChange={(e)=>setProdName(e.target.value)} />
+                        <input id="dress-select" type="text" className="form-control" value={prodName} onChange={(e)=>setProdName(e.target.value)} />
                         {/* <select id="dress-select" name="dress" className="custom-select">
                             <option selected>Long Sleeve Shirt</option>
                             <option value="short">Short Sleeve Shirt</option>
@@ -48,7 +48,7 @@ const AddProduct = (props) =>{
                     </div>
                     <div className="form-group">
                         <label for="category-select">Category:</label>
-                        <input type="text" className="form-control" value={category} onChange={(e)=>setCategory(e.target.value)} />
+                        <input id="category-select" type="text" className="form-control" value={category} onChange={(e)=>setCategory(e.target.value)} />
                         {/* <select id="category-select" name="dress" className="custom-select">
                             <option selected>Long Sleeve Shirt</option>
                             <option value="short">Short Sleeve Shirt</option>
@@ -66,7 +66,7 @@ const AddProduct = (props) =>{
                         <label for="image-choose">Image</label>
                         <input type="text" className="form-control" id="image-choose" name="filename"/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary" aria-label="Left Align">Submit</button>
                 </form>
             </div>
         </div>

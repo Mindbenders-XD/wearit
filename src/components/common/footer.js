@@ -24,8 +24,11 @@ function Footer(){
                             Stay updated with our latest trends
                         </div>
                         <div className="footer__news">
-                            <input type="text" placeholder="Email Address" className="email-box" />
-                            <button className="btn" type="button"><span className="far fa-long-arrow-right"></span></button>
+                            <div className="form-group">
+                                <label for="footer-email">email:</label>
+                                <input type="text" placeholder="Email Address" id="footer-email" className="email-box" />
+                            </div>
+                            <button className="btn" type="button" aria-label="Right Align"><span className="far fa-long-arrow-right"></span></button>
                         </div>
                     </div>
                 </div>

@@ -51,6 +51,15 @@
     }
     &__content{
         position: relative;
+        .form-group{
+            margin: 0;
+            label{
+                opacity: 0;
+                display: block;
+                margin: 0;
+                height: 0;
+            }
+        }
         .btn--blue{
             position: absolute;
             right: 0;
