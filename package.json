@@ -12,7 +12,6 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
-    "owl.carousel2": "^2.2.1",
     "popper.js": "^1.16.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
