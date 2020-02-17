@@ -29,7 +29,7 @@ class ProductCard extends React.Component{
                 <a href="#/" className={heartCls} alt="Favourites" ref="fav_icon" onClick={this.onFavIconClick}><span className="d-none d-print-block">Favourites</span></a>
                 <Link className="far fa-eye" to={`/Product/${this.props.details.productId}`}></Link>
             </div>
-            <img className="img-fluid" src={require(`../../images/${this.props.details.image}`)} alt="product" />
+            <img className="img-fluid" src={require(`../../images/${this.props.details.image}.png`)} alt="product" />
         </div>
     <h5 className="product__title text-truncate" title={this.props.details.productName}>{this.props.details.productName}</h5>
     <h5 className="product__price">{this.props.details.price}</h5>

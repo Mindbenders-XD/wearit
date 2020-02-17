@@ -51,25 +51,25 @@ const Product = () => {
           <div className="col-lg-6 col-sm-12">
             <div className="product-details-image">
               <img id={imgId}
-                src={require(`../../images/${currentProduct.image}`)}
+                src={require(`../../images/${currentProduct.image}1.png`)}
                 alt="productImg"
               /> 
               <div className="product-details-image--thumbnail" onClick={imageChange}>
                 <div className="item">
                   <img
-                    src={require(`../../images/2.png`)}
+                    src={require(`../../images/${currentProduct.image}3.png`)}
                     alt="productImgThumb"
                   />
                 </div>
                 <div className="item">
                   <img
-                    src={require(`../../images/3.png`)}
+                    src={require(`../../images/${currentProduct.image}2.png`)}
                     alt="productImgThumb"
                   />
                 </div>
                 <div className="item current">
                   <img
-                    src={require(`../../images/${currentProduct.image}`)}
+                    src={require(`../../images/${currentProduct.image}1.png`)}
                     alt="productImgThumb"
                   />
                 </div>

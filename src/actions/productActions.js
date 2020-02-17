@@ -7,7 +7,7 @@ export const loadProducts = () =>{
         meta: {
             offline: {
                 //effect: {url: 'https://api.myjson.com/bins/dap2o', method: 'GET'},
-                effect: {url: 'https://api.myjson.com/bins/zwai4', method: 'GET'},
+                effect: {url: 'https://api.myjson.com/bins/aluf8', method: 'GET'},
                 commit: {type: types.PRODUCT_LOAD_COMMIT}
         }
     }

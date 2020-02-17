@@ -1,4 +1,5 @@
 let URL = "https://api.myjson.com/bins/zwai4";
+let newURL = "https://api.myjson.com/bins/aluf8";
 var products={
     "1": {
       "productId": 1,
@@ -7,7 +8,7 @@ var products={
       "price": "45$",
       "isAvailable": true,
       "description": "Covers full sleeve",
-      "image": "shirt.png",
+      "image": "shirt",
       "isFavourite": false
     },
     "2": {
@@ -17,7 +18,7 @@ var products={
       "price": "150$",
       "isAvailable": true,
       "description": "Keeps you warm",
-      "image": "jacket.png",
+      "image": "jacket",
       "isFavourite": false
     },
     "3": {
@@ -27,17 +28,17 @@ var products={
       "price": "45$",
       "isAvailable": true,
       "description": "Stylish skirt",
-      "image": "skirt.png",
+      "image": "skirt",
       "isFavourite": false
     },
     "4": {
       "productId": 4,
-      "productName": "Tank TOp",
+      "productName": "Tank Top",
       "category": "Tops",
       "price": "45$",
       "isAvailable": true,
       "description": "Summer wear",
-      "image": "tank-top.png",
+      "image": "tank-top",
       "isFavourite": false
     },
     "5": {
@@ -47,57 +48,37 @@ var products={
       "price": "45$",
       "isAvailable": true,
       "description": "Covers full sleeve",
-      "image": "t-shirt.png",
+      "image": "t-shirt",
       "isFavourite": false
     },
     "6": {
       "productId": 6,
-      "productName": "Shirt",
-      "category": "Tops",
+      "productName": "Churidhar",
+      "category": "Indian Wear",
       "price": "45$",
       "isAvailable": true,
-      "description": "Covers full sleeve",
-      "image": "shirt.png",
+      "description": "Trendy cum traditional wear",
+      "image": "chudi",
       "isFavourite": false
     },
     "7": {
       "productId": 7,
-      "productName": "Jacket",
-      "category": "Jackets",
+      "productName": "Jean",
+      "category": "Bottoms",
       "price": "150$",
       "isAvailable": true,
-      "description": "Keeps you warm",
-      "image": "jacket.png",
+      "description": "Fit your style Jeans",
+      "image": "jeans",
       "isFavourite": false
     },
     "8": {
       "productId": 8,
-      "productName": "Skirt",
-      "category": "Bottoms",
-      "price": "45$",
+      "productName": "Fancy Top",
+      "category": "Long Tops",
+      "price": "95$",
       "isAvailable": true,
-      "description": "Stylish skirt",
-      "image": "skirt.png",
-      "isFavourite": false
-    },
-    "9": {
-      "productId": 9,
-      "productName": "Summer Top",
-      "category": "Tops",
-      "price": "45$",
-      "isAvailable": true,
-      "description": "Summer wear",
-      "image": "tank-top.png",
-      "isFavourite": false
-    },
-    "10": {
-      "productId": 10,
-      "productName": "Casual T-Shirt",
-      "category": "Tops",
-      "price": "45$",
-      "isAvailable": true,
-      "description": "Covers full sleeve",
-      "image": "t-shirt.png",
+      "description": "Trendy tops",
+      "image": "kurta",
       "isFavourite": false
     }
   }
