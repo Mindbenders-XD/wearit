@@ -6,12 +6,14 @@
     display: flex;
     height: calc(100vh - 122px);
     margin-bottom: 120px;
+    min-height: 375px;
     position: relative;
     @include if-max-break(md) {
         margin-bottom: 54px;
     }
     @include if-max-break(sm) {
         height: calc(100vh - 82px);
+        min-height: auto;
     }
     &__overlay{
         background: rgba(0,0,0,.5);
