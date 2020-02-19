@@ -34,9 +34,9 @@ const Product = () => {
     debugger;
     $(e.currentTarget).toggleClass("fas");
     if(!currentProduct.isFavourite){
-      actions.markFavourite(currentProduct.productId);
+      dispatch(actions.markFavourite(currentProduct.productId));
     }else{
-      actions.unMarkFavourite(currentProduct.productId);
+      dispatch(actions.unMarkFavourite(currentProduct.productId));
     }
 }
 
