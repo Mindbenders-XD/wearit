@@ -14,23 +14,29 @@ const AddProduct = (props) =>{
     const [description, setDescription] = useState('');
     // const dispatch = useDispatch();
 
-    const productSubmit = (e)=>{
-        let newProductId = Object.keys(allProducts).length + 1;
-        let prodObj = {
-            "productId": newProductId,
-            "productName": prodName,
-            "category": category,
-            "price": price,
-            "isAvailable": true,
-            "description": description,
-            "image": "shirt",
-            "isFavourite": false
-          }
-          debugger;
-          dispatch(addProduct(prodObj));
-          displayNotification(prodName);
-          history.push("/");
+  const productSubmit = e => {
+    let newProductId = Object.keys(allProducts).length + 1;
+    let prodObj = {
+      productId: newProductId,
+      productName: prodName,
+      category: category,
+      price: price,
+      isAvailable: true,
+      description: description,
+      image: "shirt",
+      isFavourite: false
+    };
+    debugger;
+    dispatch(addProduct(prodObj));
+    //Ask permission for Push Notification
+    if (Notification) {
+      Notification.requestPermission(function(status) {
+        console.log("Notification permission status:", status);
+        displayNotification(prodName);
+      });
     }
+    history.push("/");
+  };
 
     return(
         <section className="addproduct">

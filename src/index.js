@@ -8,11 +8,6 @@ import { Provider } from 'react-redux';
 
 const store = configureStore();
 
-//Ask permission for Push Notification
-Notification.requestPermission(function(status) {
-    console.log('Notification permission status:', status);
-});
-
 ReactDOM.render(<Provider store={store}>
         <App />
     </Provider>, document.getElementById('root'));
