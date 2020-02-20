@@ -1,7 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useSelector } from "react-redux";
+import ImagePreview from '../user/ImagePreview';
 
 function Header(props){
+    const user = useSelector(state => state.user);
+    let isUserSaved = Object.keys(user).length ? true : false;
     return(        
     <div className="header">
     <div className="header__top">
@@ -12,8 +16,9 @@ function Header(props){
                         <a href="tel:012 44 5698 7456 896">Call us: 012 44 5698 7456 896</a> 
                     </div>
                     <div className="header__right">
-                        <a href="#/">Login/Register</a>
-                        <a href="#/">My account</a>
+                        {!isUserSaved && <a href="#/">Login/Register</a>}
+                        {isUserSaved && <a href="#/">{user.name}</a>}                        
+                        <Link to="/user">{isUserSaved && <ImagePreview dataUri={user.photo} inHeader={'user-img'} />}My account</Link>
                         <Link to="/addProduct">Admin</Link>
                     </div>
                 </div>
@@ -36,6 +41,7 @@ function Header(props){
                             <a href="#/">Pages</a>
                             <a href="#/">Contact</a>
                             <Link className="mobile-on" to="/addProduct">Admin</Link>
+                            <Link className="mobile-on" to="/user">{isUserSaved && <ImagePreview dataUri={user.photo} inHeader={'user-img'} />}My Account</Link>
                         </div>
                         <div className="header__icons">
                             <a href="#/">

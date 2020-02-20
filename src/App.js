@@ -9,6 +9,7 @@ import Product from './components/productDetails/product';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
 import AddProduct from './components/admin/addProduct';
+import UserProfile from './components/user/userProfile';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
                     </Route>
                     <Route path="/addProduct">
                         <AddProduct />
+                    </Route>
+                    <Route path="/user">
+                        <UserProfile />
                     </Route>
                 </Switch>
                 <Footer />
