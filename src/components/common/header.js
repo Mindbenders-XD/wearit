@@ -16,7 +16,7 @@ function Header(props){
                             <a href="tel:012 44 5698 7456 896">Call us: 012 44 5698 7456 896</a> 
                         </div>
                         <div className="header__right">
-                            {!isUserSaved && <Link to="/user">Login/Register</Link>}
+                            {!isUserSaved && <Link to="/user">Register</Link>}
                             {isUserSaved  && <Link to="/user"><ImagePreview dataUri={user.photo} inHeader={'user-img'} />{user.name}</Link>}                      
                             <a href="#/">My account</a>
                             <Link to="/addProduct">Admin</Link>

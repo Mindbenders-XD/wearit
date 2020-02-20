@@ -4,7 +4,7 @@ let isSubscribed = false;
 export default function displayNotification(prodName) {
   fetch(window.location.origin+'/productNotification', {
         method: 'POST',
-        body: prodName,
+        body: JSON.stringify({"name": prodName}),
         headers: {
           'content-type': 'application/json'
         }
