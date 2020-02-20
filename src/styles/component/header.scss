@@ -125,12 +125,6 @@
                 color: $blue;
             }            
         }
-        .mobile-on{
-            display: none;
-            @include if-max-break(sm) {
-                display: block;
-            }
-        }
     }
     &__icons {
         float: right;

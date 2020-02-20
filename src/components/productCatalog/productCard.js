@@ -26,8 +26,8 @@ class ProductCard extends React.Component{
         return(<div className="product w-20 col text-center" id={this.props.details.productId}>
         <div className="product__image">
             <div className="product__hover">
-                <a href="#/" className={heartCls} alt="Favourites" ref="fav_icon" onClick={this.onFavIconClick}><span className="d-none d-print-block">Favourites</span></a>
-                <Link className="far fa-eye" to={`/Product/${this.props.details.productId}`}></Link>
+                <a href="#/" className={heartCls} alt="Favourites" title="Add to Favourites" ref="fav_icon" onClick={this.onFavIconClick}><span className="d-none d-print-block">Favourites</span></a>
+                <Link className="far fa-eye" alt="view" title="View Product" to={`/Product/${this.props.details.productId}`}><span className="d-none d-print-block">View Product</span></Link>
             </div>
             <img className="img-fluid" src={require(`../../images/${this.props.details.image}.png`)} alt="product" />
         </div>
