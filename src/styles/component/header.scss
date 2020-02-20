@@ -125,7 +125,7 @@
                 color: $blue;
             }            
         }
-        .mobile-on{
+        .mobile-display{
             display: none;
             @include if-max-break(sm) {
                 display: block;

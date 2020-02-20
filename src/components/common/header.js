@@ -40,8 +40,8 @@ function Header(props){
                                 <a href="#/">Blog</a>
                                 <a href="#/">Pages</a>
                                 <a href="#/">Contact</a>
-                                <Link className="mobile-on" to="/addProduct">Admin</Link>
-                                <Link className="mobile-on" to="/user">{isUserSaved ? (<><ImagePreview dataUri={user.photo} inHeader={'user-img'} /><span>{user.name}</span></>) : <span>Register</span>}</Link>
+                                <Link className="mobile-display" to="/addProduct">Admin</Link>
+                                <Link className="mobile-display" to="/user">{isUserSaved ? (<><ImagePreview dataUri={user.photo} inHeader={'user-img'} /><span>{user.name}</span></>) : <span>Register</span>}</Link>
                             </div>
                             <div className="header__icons">
                                 <a href="#/" alt="Search" title="Search">
