@@ -75,6 +75,7 @@ const UserProfile = () => {
               />
             </div>
             <div className="form-group">
+            <label for="price-add">Profile Picture:</label>
               {dataUri ? (
                 <ImagePreview dataUri={dataUri} inHeader={'profile-img'} />
               ) : (

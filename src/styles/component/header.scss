@@ -82,7 +82,7 @@
             z-index: 99;
             background:$bg-gray;
             left: auto;
-            width: 120px;
+            width: 170px;
             .dark--theme &{
                 background: $primary-1;
             }
@@ -125,6 +125,19 @@
                 color: $blue;
             }            
         }
+        .mobile-on{
+            display: none;
+            @include if-max-break(sm) {
+                display: block;
+            }
+            span:last-child{
+                max-width: 100px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+                white-space: nowrap;
+            }
+        }
     }
     &__icons {
         float: right;
@@ -155,6 +168,7 @@
         right: 0px;
         top: 25px;
         z-index: 2;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
         &__icon {
             width: 30px;
             display: block;
@@ -181,7 +195,6 @@
 .user-img {
     width: 20px;
     height: 20px;
-    overflow: hidden;
     float: left;
     margin-right: 5px;
     img {
@@ -192,9 +205,14 @@
 }
 
 .profile-img{
+    float: left;
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
     img {
-        width: 300px;
-        height: 300px;
+        width: 120px;
+        height: 120px;
+        border-radius: 5px;
     }
 }
 

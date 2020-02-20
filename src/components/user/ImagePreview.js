@@ -6,7 +6,7 @@ export const ImagePreview = ({ dataUri, inHeader }) => {
 
   return (
     <span className={classNameFullscreen}>
-      <img src={dataUri} />
+      <img src={dataUri} alt="profilepic" />
     </span>
   );
 };

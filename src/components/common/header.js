@@ -16,9 +16,9 @@ function Header(props){
                             <a href="tel:012 44 5698 7456 896">Call us: 012 44 5698 7456 896</a> 
                         </div>
                         <div className="header__right">
-                            {!isUserSaved && <a href="#/">Login/Register</a>}
-                            {isUserSaved && <a href="#/">{user.name}</a>}                        
-                            <Link to="/user">{isUserSaved && <ImagePreview dataUri={user.photo} inHeader={'user-img'} />}My account</Link>
+                            {!isUserSaved && <Link to="/user">Login/Register</Link>}
+                            {isUserSaved  && <Link to="/user"><ImagePreview dataUri={user.photo} inHeader={'user-img'} />{user.name}</Link>}                      
+                            <a href="#/">My account</a>
                             <Link to="/addProduct">Admin</Link>
                         </div>
                     </div>
@@ -40,8 +40,8 @@ function Header(props){
                                 <a href="#/">Blog</a>
                                 <a href="#/">Pages</a>
                                 <a href="#/">Contact</a>
-                                <Link className="d-block d-sm-none" to="/addProduct">Admin</Link>
-                                <Link className="d-block d-sm-none" to="/user">{isUserSaved && <ImagePreview dataUri={user.photo} inHeader={'user-img'} />}My Account</Link>
+                                <Link className="mobile-on" to="/addProduct">Admin</Link>
+                                <Link className="mobile-on" to="/user">{isUserSaved ? (<><ImagePreview dataUri={user.photo} inHeader={'user-img'} /><span>{user.name}</span></>) : <span>Register</span>}</Link>
                             </div>
                             <div className="header__icons">
                                 <a href="#/" alt="Search" title="Search">
