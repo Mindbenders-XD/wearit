@@ -25,7 +25,7 @@ function Footer(){
                         </div>
                         <div className="footer__news">
                             <div className="form-group">
-                                <label for="footer-email">email:</label>
+                                <label htmlFor="footer-email">email:</label>
                                 <input type="text" placeholder="Email Address" id="footer-email" className="email-box" />
                             </div>
                             <button className="btn" type="button" aria-label="Right Align"><span className="far fa-long-arrow-right"></span></button>
@@ -41,28 +41,28 @@ function Footer(){
                         </div>
                         <div className="instafeed">
                             <div className="instafeed__img">
-                                <img src={require("../../images/1.png")} alt="instaimg"/>
+                                <img src={require("../../images/1.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/2.png")} alt="instaimg"/>
+                                <img src={require("../../images/2.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/3.png")} alt="instaimg"/>
+                                <img src={require("../../images/3.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/4.png")} alt="instaimg"/>
+                                <img src={require("../../images/4.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/5.png")} alt="instaimg"/>
+                                <img src={require("../../images/5.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/6.png")} alt="instaimg"/>
+                                <img src={require("../../images/6.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/7.png")} alt="instaimg"/>
+                                <img src={require("../../images/7.jpg")} alt="instaimg"/>
                             </div>
                             <div className="instafeed__img">
-                                <img src={require("../../images/8.png")} alt="instaimg"/>
+                                <img src={require("../../images/8.jpg")} alt="instaimg"/>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ import * as types from './actionTypes'
 //         "price": "45$",
 //         "isAvailable": true,
 //         "description": "Covers full sleeve",
-//         "image": "shirt.png",
+//         "image": "shirt.jpg",
 //         "isFavourite": false
 //       }
 //     const expectedAction = {
