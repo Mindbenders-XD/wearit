@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import './styles/vendor.min.css';
 import './styles/app.scss';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import $ from 'jquery';
-import bootstrap from 'bootstrap';
 import Catalog from './components/productCatalog/catalog';
 import Product from './components/productDetails/product';
 import Header from './components/common/header';
