@@ -8,7 +8,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Covers full sleeve",
-          "image": "shirt.png",
+          "image": "shirt.jpg",
           "isFavourite": false
         },
         {
@@ -18,7 +18,7 @@
           "price": "150$",
           "isAvailable": true,
           "description": "Keeps you warm",
-          "image": "jacket.png",
+          "image": "jacket.jpg",
           "isFavourite": false
         },
         {
@@ -28,7 +28,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Stylish skirt",
-          "image": "skirt.png",
+          "image": "skirt.jpg",
           "isFavourite": false
         },
         {
@@ -38,7 +38,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Summer wear",
-          "image": "tank-top.png",
+          "image": "tank-top.jpg",
           "isFavourite": false
         },
         {
@@ -48,7 +48,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Covers full sleeve",
-          "image": "t-shirt.png",
+          "image": "t-shirt.jpg",
           "isFavourite": false
         },
         {
@@ -58,7 +58,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Covers full sleeve",
-          "image": "shirt.png",
+          "image": "shirt.jpg",
           "isFavourite": false
         },
         {
@@ -68,7 +68,7 @@
           "price": "150$",
           "isAvailable": true,
           "description": "Keeps you warm",
-          "image": "jacket.png",
+          "image": "jacket.jpg",
           "isFavourite": false
         },
         {
@@ -78,7 +78,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Stylish skirt",
-          "image": "skirt.png",
+          "image": "skirt.jpg",
           "isFavourite": false
         },
         {
@@ -88,7 +88,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Summer wear",
-          "image": "tank-top.png",
+          "image": "tank-top.jpg",
           "isFavourite": false
         },
         {
@@ -98,7 +98,7 @@
           "price": "45$",
           "isAvailable": true,
           "description": "Covers full sleeve",
-          "image": "t-shirt.png",
+          "image": "t-shirt.jpg",
           "isFavourite": false
         }
       ]

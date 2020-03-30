@@ -66,7 +66,7 @@ function Header(props){
                 </div>
             </div>
             <div className="theme-selection">
-                <a className="theme-selection__icon" data-toggle="collapse" href="#theme-settings"><span className="fas fa-cog"></span></a>
+                <a className="theme-selection__icon" title="Select Theme" data-toggle="collapse" href="#theme-settings"><span className="fas fa-cog"></span><span className="d-none d-print-block">Select Theme</span></a>
                 <div className="theme-selection__collapse collapse" id="theme-settings" onClick={props.changeTheme}>
                     <a href="#/" className="dark--theme" title="Black Theme"><span className="d-none d-print-block">Black</span></a>
                     <a href="#/" className="light--theme" title="Grey Theme"><span className="d-none d-print-block">Grey</span></a>
